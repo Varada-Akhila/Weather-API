@@ -15,7 +15,7 @@ const Weather = () => {
             return ;
         }
 
-        let api_key='1b286342896e9733ef6bd67cf34bcf80'
+        let api_key="your_key"
         let res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`)
         console.log(res);
 
