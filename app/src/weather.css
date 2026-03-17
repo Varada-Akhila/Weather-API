@@ -1,0 +1,144 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* PAGE BACKGROUND */
+
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+
+    /* darker pastel gradient */
+    background:linear-gradient(270deg,#c5d9ff,#e8cfe8,#cfe9d6,#d9c8f2);
+    background-size:600% 600%;
+    animation:bgMove 12s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* GLASS CARD */
+
+body > div{
+    width:380px;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.6);
+
+    box-shadow:0 12px 35px rgba(0,0,0,0.15);
+
+    animation:floatCard 6s ease-in-out infinite;
+}
+
+/* FLOATING EFFECT */
+
+@keyframes floatCard{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* TITLE */
+
+.app-title{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* INPUT */
+
+input{
+    width:75%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    outline:none;
+    text-align:center;
+    font-size:15px;
+
+    background:white;
+
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
+    margin-bottom:15px;
+}
+
+/* BUTTON */
+
+button{
+    padding:10px 22px;
+    border:none;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:600;
+
+    background:linear-gradient(45deg,#6fb5ff,#7ecb9f);
+    color:#222;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* BUTTON HOVER */
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* WEATHER RESULT CARD */
+
+div div{
+    margin-top:25px;
+    padding:18px;
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.65);
+
+    backdrop-filter:blur(10px);
+
+    animation:fadeIn 0.5s ease;
+}
+
+/* TEXT */
+
+h1{
+    margin-bottom:15px;
+    font-size:22px;
+    color:#2c2c2c;
+}
+
+h2{
+    margin:8px 0;
+    font-weight:400;
+    font-size:17px;
+    color:#444;
+}
+
+/* RESULT ANIMATION */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
